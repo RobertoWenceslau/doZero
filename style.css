@@ -4,22 +4,19 @@ body{
 
 }
 header{
-    text-align: center;
-    background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 5 5 5 5;
-    padding: 5;
-    height: 100px;
+    background-image: linear-gradient(burlywood, white);
+    padding: 10px 10px 10px 10px;
     
 }
-.titulodapagina {
-    background-color: bisque;
-}
-header p{
-    font-weight: bolder;
+
+header img{
+    
+    max-height: 100px;
+    border-radius: 5px;
+    margin: 10 10 10 10;
 }
 main {
-    background-color: grey;
+    background-color: white;
     margin: 0 10 10 10;
     padding: 10px 10px 10px 10px;
 }
@@ -32,15 +29,29 @@ h2{
     text-align: center;
 }
 section{
-    background-color: white;
+    background-color: aquamarine;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
-       
+    border: dotted 3px;
+    border-color: red;
+    box-shadow: black 8px 8px;
+    
 }
- section p::first-letter{
+.primeiraletra::first-letter{
     text-transform: uppercase;
     font-size:xx-large;
     color: red;
+
+}
+ footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: linear-gradient(white, burlywood);
+    padding: 20px 20px 20px 20px;
+    font-weight: bolder;
+    
+
  }
