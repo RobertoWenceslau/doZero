@@ -43,8 +43,44 @@ section{
     text-transform: uppercase;
     font-size:xx-large;
     color: red;
+}
+.exposicao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
+.vendase{
+    background-color: white;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+.vendase img{
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: 100%;
+}
+.vendasd{
+    background-color: black;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+.vendasd img{
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: 100%;
+}
+.tituloproduto{
+    background-color: aqua;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+
  footer{
     display: flex;
     flex-direction: row;

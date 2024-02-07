@@ -79,6 +79,88 @@
         </div>
 
         <hr>
+        <!-- seção de formulários-->
+        <div style="display: flex; justify-content: center;">
+            <div>
+                <form action="">
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" placeholder="Insira seu nome"><br><br>
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" placeholder="Informe seu e-mail"><br><br>
+                    <label for="assunto">Assunto: </label><br>
+                    <textarea id="assunto" cols="30" rows="10" placeholder="Insira sua mensagem"></textarea><br>
+                    <button onclick="enviarformulario()">Enviar</button>
+                    <p>Dados informados</p>
+                    <span id="resultado"></span>
+
+                </form>                
+            </div>
+
+
+        </div>
+
+        <!-- seção de venda de produtos-->
+        <div style="background-color: aqua; margin: 10 10 10 10; padding: 10px 10px 10px 10px;">
+            <h2 style="background-color: white;">Produtos a venda no site do Sampsom</h2>
+            <div class="exposicao">
+                <div class="vendase">
+                    <h4 style="display: flex; justify-content: center;" class="tituloproduto">Teste de venda de produtos</h4>
+                    <img src="./img/sansaocorte.png" alt="">
+                    <div>
+                        <p>Roupas</p>
+                        <label for="roupas">Quantidade</label>
+                        <input type="number" id="quantidade">
+                        <button onclick="comprarroupa()">Comprar</button>
+                        
+                    </div>
+                </div>
+                
+                <div class="vendasd">
+                    <h4 style="display: flex; justify-content: center;" class="tituloproduto">Teste de venda de produtos</h4>
+                    <img src="./img/sansaocorte.png" alt="">
+                    <div>
+                        <p>Tênis</p>
+                        <label for="tamanho">Tamanho</label>
+                            <input type="radio" name="tamanho" value="40">40 
+                            <input type="radio" name="tamanho" value="41">41 
+                            <input type="radio" name="tamanho" value="42">42 
+                            <input type="radio" name="tamanho" value="43">43
+                            <button onclick="comprartenis()">Comprar</button>
+                    </div>
+                </div>
+            
+            </div>
+            <div style="display: flex;" class="exposicao">
+                <div class="vendasd">
+                    <h4 style="display: flex; justify-content: center;" class="tituloproduto">Teste de venda de produtos</h4>
+                    <img src="./img/sansaocorte.png" alt="">
+                    <p>Tênis</p>
+                    <label for="tamanho">Tamanho</label>
+                        <input type="radio" name="tamanho" value="40">40 
+                        <input type="radio" name="tamanho" value="41">41 
+                        <input type="radio" name="tamanho" value="42">42 
+                        <input type="radio" name="tamanho" value="43">43
+                        <button onclick="comprartenis()">Comprar</button>
+
+                </div>
+                <div class="vendase">
+                    <h4 style="display: flex; justify-content: center;" class="tituloproduto">Teste de venda de produtos</h4>
+                    <img src="./img/sansaocorte.png" alt="">
+                    <div">
+                        <p>Roupas</p>
+                        <label for="roupas">Quantidade</label>
+                        <input type="number" id="quantidade2">
+                        <button onclick="comprarroupa2()">Comprar</button>
+
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+        </div>
+
+
     </main>
     <footer>
         <div><p>Site desenvolvido para teste de aprendizado com códigos HTML e CSS.</p></div>
@@ -91,4 +173,25 @@
     </footer>
     
 </body>
+<script>
+    function enviarformulario() {
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var assunto = document.getElementById("assunto").value;
+        alert("Os dados informados são: "+ nome + " - " + email+ " - " + assunto)
+    }
+    function comprartenis(){
+        var escolha = document.querySelector('input[name="tamanho"]:checked').value;
+        alert("Compra efetuada no tamanho "+ escolha +". Ótima escolha!");
+    }
+    function comprarroupa(){
+        var quantidade = parseInt(document.getElementById('quantidade').value);
+        alert("Compra efetuada com sucesso. Quantidade "+ quantidade);
+    }
+    function comprarroupa2(){
+        var quantidade = parseInt(document.getElementById('quantidade2').value);
+        alert("Compra efetuada com sucesso. Quantidade "+ quantidade);
+    }
+
+</script>
 </html>
