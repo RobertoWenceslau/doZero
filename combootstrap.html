@@ -9,54 +9,283 @@
     <link rel="stylesheet" href="./stylebootstrap.css">
 </head>
 <body>
-    <header class="container-fluid pt-2 my-5 bg-dark text-white">
-        <div style="display: flex; justify-content: space-evenly; align-items: baseline;">
-            <div>
-                <img src="./img/rew.jpeg" class="img-fluid img-thumbnail">
-                
-            </div>
-            <div>
-                <h1>Roberto Wenceslau</h1>
-                <h3><p>Página de testes de Código HTML e CSS (sem bootstrap ou w3.css)</p></h3>
+  
+    <header>
+      <div>
+        <div>
+          
+          <nav class="navbar text-bg-primary border-bottom border-body" data-bs-theme="dark">
+            <div class="container-md">
+              <!--NavBar com botão de BodyScrooling-->
+              <div>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Sobre o autor</button>
 
+                  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Informações sobre o autor</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <p>
+                        <h1>Roberto Wenceslau</h1>
+                        <p>Página de testes de Código HTML e CSS com Bootstrap construída durante aprendizagem de curso de Java do SENAI/SC</p>
+                      </p>
+                    </div>
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="./index.html" target="_blank" class="text-decoration-none">Sem bootstrap/W3.CSS</a></li>
-                        <li><a href="./combootstrap.html" target="_blank" class="text-decoration-none">Com Bootstrap</a></li>
-                        <li><a href="./comw3.html" target="_blank" class="text-decoration-none">Com W3.CSS</a></li>
-                    </ul>
-                </nav>
+              </div>
+              <a href="./index.html" target="_blank" class="text-decoration-none">Sem Bootstrap/W3.CSS</a>
+              <a href="./combootstrap.html" target="_blank" class="text-decoration-none">Com Bootstrap</a>
+              <a href="./comw3.html" target="_blank" class="text-decoration-none">Com W3.CSS</a>
             </div>
+          </nav>
         </div>
+        
+
+      </div>
+      
+        
     </header>
     <main>
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./img/filhote.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./img/sansaopixar.jpeg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./img/sansao.jpg" class="d-block w-100" alt="...">
+      <div class="card text-bg-primary mb-3" style="display: flex; flex-direction: row; justify-content: center;">
+        <div>
+          <img src="./img/2371262e-6d2b-4a3f-a481-6b329bf0e342.jpeg" style="width: 40px; height: 40px; margin: 0 10px 0 5px;">
+        </div>
+        <div>
+          <h2>Momento Insta</h2>
+        </div>
+        
+          
+      </div>
+      
+      <div id="carouselExampleDark" class="carousel carousel-dark slide"><!-- Carrossel de fotos -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./img/filhotecorte.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="background-color: white; border-radius: 10px;">Pequeno e danado!</h5>
+              <p style="background-color: white; border-radius: 10px; font-weight: bold;">Desde pequeno ele pensava que era uma Britadeira. Comia pedra como nenhuma outra máquina.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./img/modelosansao.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="background-color: white; border-radius: 10px;">Até que tentou a carreira de Modelo</h5>
+              <p style="background-color: white; border-radius: 10px; font-weight: bold;">Depois de algumas decepções na vida de moedor de brita a carreira da publicidade encantou o Sansão.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/sansaopixar.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="background-color: white; border-radius: 10px;">Primeiro trabalho de grande relevência</h5>
+              <p style="background-color: white; border-radius: 10px; font-weight: bold;">Até que em Outubro de 2023 conseguiu o papel de abajur na logomarca da Pixar.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+          <div style="display: flex; margin: 20px; justify-content: space-evenly; align-items: center;"> <!-- Caixas pequenas de texto -->
+            <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header" style="display: flex; justify-content: space-between;">Texto teste
+                <div class="spinner-border text-light" role="status"><!--spinning-->
+                <span class="visually-hidden">Loading...</span>
+              </div></div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            
+            
+            <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+              <div class="card-header" style="display: flex; justify-content: space-between;">Texto teste
+                <div class="spinner-border text-dark" role="status"><!--spinning-->
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            
+            <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header" style="display: flex; justify-content: space-between;">Texto teste
+                <div class="spinner-border text-light" role="status"><!--spinning-->
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div>
+              
+            </div>
+            <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+              <div class="card-header" style="display: flex; justify-content: space-between;">Texto teste
+                <div class="spinner-border text-dark" role="status"><!--spinning-->
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+
           </div>
+      <div> <!-- Formulários -->
+        <form style="background-color: aquamarine; padding: 10px; border-radius: 10px;">
+          <div class="row mb-3">
+            <label for="inputName3" class="col-sm-2 col-form-label">Nome</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputName3" placeholder="Insira seu Nome">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Insira seu E-mail">
+            </div>
+          </div>
+          
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Mensagem</legend>
+            <div class="col-sm-10">
+              <textarea name="mensagem" id="inputMensagem3" style="width: 100%;" rows="5" placeholder="Escreva sua mensagem nesse campo."></textarea>
+            </div>
+          </fieldset>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button onclick="enviarmensagem()" class="btn btn-primary" type="button">Enviar</button>
+            
+          </div>
+        </form>
+
+      </div>
+      <div><!--Seção de produtos a venda -->
+        <div class="row" >
+          <div class="card-group">
+            <h2>Produtos a venda</h2>
+            
+              
+              
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="card-group">
+            <div class="card">
+              <img src="./img/prancha.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Prancha de Isopor</h5>
+                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 199,99</h4>
+                  <div class="form-floating">
+                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                      <option selected>Escolha o tamanho</option>
+                      <option value="Extra">1,5m</option>
+                      <option value="Low">2,00m</option>
+                    </select>
+                    <label for="floatingSelect">Selecione abaixo</label>
+                  </div>
+                  <label for="quantidadecamisetabranca">Quantidade: </label>
+                  <input type="number" id="quantidadecamisetabranca">
+                  <span></span>
+                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./img/turbina.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Turbina Boing 737</h5>
+                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 18.398.259,00</h4>
+                  <div class="form-floating">
+                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                      <option selected>Escolha a Potência</option>
+                      <option value="Extra">Extra Power</option>
+                      <option value="Low">Low Power</option>
+                    </select>
+                    <label for="floatingSelect">Selecione abaixo</label>
+                  </div>
+                  <label for="quantidadecamisetabranca">Quantidade: </label>
+                  <input type="number" id="quantidadecamisetabranca">
+                  <span></span>
+                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./img/ventilador.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Ventilador Anti-horário</h5>
+                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 499,99</h4>
+                  <div class="form-floating">
+                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                      <option selected>Escolha o tamanho</option>
+                      <option value="30">30cm</option>
+                      <option value="40">40cm</option>
+                      <option value="45">45cm</option>
+                    </select>
+                    <label for="floatingSelect">Selecione abaixo</label>
+                  </div>
+                  <label for="quantidadecamisetabranca">Quantidade: </label>
+                  <input type="number" id="quantidadecamisetabranca">
+                  <span></span>
+                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         </section>
+
 
     </main>
-    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright &copy; 2024</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
+<script>
+  function enviarmensagem(){
+    var nome = document.getElementById("inputName3").value;
+    var email = document.getElementById("inputEmail3").value;
+    var mensagem = document.getElementById("inputMensagem3").value;
+    if(nome == "" || email == "" || mensagem == ""){
+      alert("Preencha todos os campos!");
+    }else{
+      alert("Mensagem enviada com sucesso! Informações enviadas - Nome: "+ nome +" E-mail: "+ email +" Mensagem: "+ mensagem);
+    }
+  }
+  function comprarprodutos(){ 
+    let produto = document.getElementById("camisetabranca").innerHTML;
+    var quantidade = document.getElementById("quantidadecamisetabranca").value;   
+    var tamanho = document.getElementById("floatingSelect2").value;
+    var valor = document.getElementById("valor2").value;
+    
+    
+    if(produto == "" || quantidade == "" || valor == "" || tamanho == ""){
+      alert("Preencha todos os campos!");
+    }else{
+      alert("Produto comprado com sucesso! Enviado conforme escolha. Produto: "+ produto +" - quantidade: "+ quantidade +" - Tamanho: "+ tamanho +". Valor total: "+ valor + quantidade + soma);
+    }
+
+  }
+</script>
 </html>
 <!-- marcar textos no bootstrap5 
 <mark> realça o texto
