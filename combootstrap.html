@@ -53,7 +53,7 @@
     <main>
 
       <section><!--Momento instagram-->
-        <div class="container mt-4 mx-5 text-light" style="background-color: purple; border-radius: 20px;" ><!--Momento INstagram-->
+        <div class="container mt-4 mb-1 mx-5 text-light" style="background-color: purple; border-radius: 20px;" ><!--Momento INstagram-->
           <div class="card-group p-1" style="justify-content: space-between;">
             <div class="d-none d-sm-block">
               <img src="./img/2371262e-6d2b-4a3f-a481-6b329bf0e342.jpeg" style="width: 40px; height: 40px;">
@@ -196,15 +196,15 @@
           </div>
         </form>
 
-      <div><!--Seção de produtos a venda -->
-        
-      <h2 class="card-title; text-bg-light bg-md py-2 px-5 my-3 text-center">Produtos a venda</h2>  
-              
-            
+      <section  class="m-5">
+        <div><!--Seção de produtos a venda -->
+          <h2 class="card-title; text-bg-light bg-md py-2 px-5 my-3 text-center" style="border-radius: 10px;">Produtos a venda</h2>          
         </div>
-        <section> <!--Seção de vendas de produtos-->
-          <div class="card-group">
-            <div class="card">
+      </section>
+      
+        <section class="m-5"> <!--Seção de vendas de produtos-->
+          <div class="card-group column-gap-3">
+            <div class="card"> <!--Produto 1-->
               <img src="./img/prancha.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Prancha de Isopor</h5>
@@ -224,13 +224,13 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card"><!--Produto 2-->
               <img src="./img/turbina.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Turbina Boing 737</h5>
                 <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 18.398.259,00</h4>
                   <div class="form-floating">
-                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                    <select class="form-select" id="turbina" aria-label="Floating label select example">
                       <option selected>Escolha a Potência</option>
                       <option value="Extra">Extra Power</option>
                       <option value="Low">Low Power</option>
@@ -244,22 +244,22 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card"> <!--Produto 3-->
               <img src="./img/ventilador.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Ventilador Anti-horário</h5>
-                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 499,99</h4>
+                <h5 class="card-title" id="venda3">Ventilador Anti-horário</h5>
+                <div><h4 type="text" name="valor2" id="valor" value="499">R$ 499,99</h4>
                   <div class="form-floating">
-                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
-                      <option selected>Escolha o tamanho</option>
-                      <option value="30">30cm</option>
-                      <option value="40">40cm</option>
-                      <option value="45">45cm</option>
+                    <select class="form-select" id="opçãotamanho" aria-label="Floating label select example">
+                      <option selected name="opção1">Escolha o tamanho</option>
+                      <option value="30cm">30cm</option>
+                      <option value="40cm">40cm</option>
+                      <option value="45cm">45cm</option>
                     </select>
-                    <label for="floatingSelect">Selecione abaixo</label>
+                    <label for="quantidade">Selecione abaixo</label>
                   </div>
-                  <label for="quantidadecamisetabranca">Quantidade: </label>
-                  <input type="number" id="quantidadecamisetabranca">
+                  <label for="quantidade">Quantidade: </label>
+                  <input type="number" id="quantidade">
                   <span></span>
                   <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
                 </div>
@@ -271,10 +271,13 @@
 
     </main>
     <footer>
-      <div class="container">
-        <div class="row">
+      <div class="container mt-5">
+        <div class="container-fluid text-center text-light">
           <div class="col-12">
             <p>Copyright &copy; 2024</p>
+          </div>
+          <div>
+            <p>Roberto Wenceslau. All rights reserved</p>
           </div>
         </div>
       </div>
@@ -292,17 +295,20 @@
     }
   }
   function comprarprodutos(){ 
-    let produto = document.getElementById("camisetabranca").innerHTML;
-    var quantidade = document.getElementById("quantidadecamisetabranca").value;   
-    var tamanho = document.getElementById("floatingSelect2").value;
-    var valor = document.getElementById("valor2").value;
+   var produto = document.getElementById("venda3").innerHTML; 
+   var opçãotamanho = document.getElementById("opçãotamanho").value;
+   var quantidade = parseInt(document.getElementById("quantidade").value);
+   var valor = parseInt(document.getElementById("valor").innerHTML); //consertar esse código
+
+
+
+   alert("Compra efetuada. Comprou "+ produto + " - Tamanho: " + opçãotamanho + ". Quantidade: "+ quantidade + " - Valor do produto: "+ valor)
     
-    
-    if(produto == "" || quantidade == "" || valor == "" || tamanho == ""){
-      alert("Preencha todos os campos!");
-    }else{
-      alert("Produto comprado com sucesso! Enviado conforme escolha. Produto: "+ produto +" - quantidade: "+ quantidade +" - Tamanho: "+ tamanho +". Valor total: "+ valor + quantidade + soma);
-    }
+    //if(produto == "" || quantidade == "" || valor == "" || tamanho == ""){
+      //alert("Preencha todos os campos!");
+    //}else{
+      //alert("Produto comprado com sucesso! Enviado conforme escolha. Produto: "+ produto +" - quantidade: "+ quantidade +" - Tamanho: "+ tamanho +". Valor total: "+ valor + quantidade + soma);
+    //}
 
   }
 </script>
