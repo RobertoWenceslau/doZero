@@ -207,40 +207,42 @@
             <div class="card"> <!--Produto 1-->
               <img src="./img/prancha.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Prancha de Isopor</h5>
-                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 199,99</h4>
+                <h5 class="card-title" id="venda1">Prancha de Isopor</h5>
+                <div><input type="number" id="valor1" disabled hidden value="199.99"></div>
+                <div><h4>R$ 199,99</h4>
                   <div class="form-floating">
-                    <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
-                      <option selected>Escolha o tamanho</option>
-                      <option value="Extra">1,5m</option>
-                      <option value="Low">2,00m</option>
+                    <select class="form-select" id="opção1" aria-label="Floating label select example">
+                      <option selected>Escolha</option>
+                      <option value="1,5m">1,5m</option>
+                      <option value="2,00m">2,00m</option>
                     </select>
                     <label for="floatingSelect">Selecione abaixo</label>
                   </div>
-                  <label for="quantidadecamisetabranca">Quantidade: </label>
-                  <input type="number" id="quantidadecamisetabranca">
+                  <label for="quantidade1">Quantidade: </label>
+                  <input type="number" id="quantidade1" value="1">
                   <span></span>
-                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                  <button onclick="comprarprodutos1()" type="button" class="btn btn-success">Comprar</button>
                 </div>
               </div>
             </div>
             <div class="card"><!--Produto 2-->
               <img src="./img/turbina.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Turbina Boing 737</h5>
-                <div><h4 type="number" name="valor2" id="valor2" value="100">R$ 18.398.259,00</h4>
+                <h5 class="card-title" id="venda2">Turbina Boing 737</h5>
+                <div><input type="number" id="valor2" disabled hidden value="18398259.99"></div>
+                <div><h4>R$ 18.398.259,99</h4>
                   <div class="form-floating">
-                    <select class="form-select" id="turbina" aria-label="Floating label select example">
-                      <option selected>Escolha a Potência</option>
+                    <select class="form-select" id="opção2" aria-label="Floating label select example">
+                      <option selected>Escolha</option>
                       <option value="Extra">Extra Power</option>
                       <option value="Low">Low Power</option>
                     </select>
                     <label for="floatingSelect">Selecione abaixo</label>
                   </div>
-                  <label for="quantidadecamisetabranca">Quantidade: </label>
-                  <input type="number" id="quantidadecamisetabranca">
+                  <label for="quantidade2">Quantidade: </label>
+                  <input type="number" id="quantidade2" value="1">
                   <span></span>
-                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                  <button onclick="comprarprodutos2()" type="button" class="btn btn-success">Comprar</button>
                 </div>
               </div>
             </div>
@@ -248,20 +250,21 @@
               <img src="./img/ventilador.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title" id="venda3">Ventilador Anti-horário</h5>
-                <div><h4 type="text" name="valor2" id="valor" value="499">R$ 499,99</h4>
+                <div><input type="number" id="valor3" disabled hidden value="499.99"></div>
+                <div><h4>R$ 499,99</h4>
                   <div class="form-floating">
-                    <select class="form-select" id="opçãotamanho" aria-label="Floating label select example">
-                      <option selected name="opção1">Escolha o tamanho</option>
+                    <select class="form-select" id="opção3" aria-label="Floating label select example">
+                      <option selected name="opção3">Escolha</option>
                       <option value="30cm">30cm</option>
                       <option value="40cm">40cm</option>
                       <option value="45cm">45cm</option>
                     </select>
-                    <label for="quantidade">Selecione abaixo</label>
+                    <label for="quantidade3">Selecione abaixo</label>
                   </div>
-                  <label for="quantidade">Quantidade: </label>
-                  <input type="number" id="quantidade">
+                  <label for="quantidade3">Quantidade: </label>
+                  <input type="number" id="quantidade3" value="1">
                   <span></span>
-                  <button onclick="comprarprodutos()" type="button" class="btn btn-success">Comprar</button>
+                  <button onclick="comprarprodutos3()" type="button" class="btn btn-success">Comprar</button>
                 </div>
               </div>
             </div>
@@ -294,22 +297,38 @@
       alert("Mensagem enviada com sucesso! Informações enviadas - Nome: "+ nome +" E-mail: "+ email +" Mensagem: "+ mensagem);
     }
   }
-  function comprarprodutos(){ 
+  function comprarprodutos1(){ 
+   var produto = document.getElementById("venda1").innerHTML; 
+   var opção = document.getElementById("opção1").value;
+   var quantidade = parseInt(document.getElementById("quantidade1").value);
+   var valor = parseFloat(document.getElementById("valor1").value);
+    if(produto == "" || quantidade == "" || quantidade <= 0 || valor == "" || opção == "Escolha"){
+      alert("Preencha todos os campos!");
+    }else{
+      alert("Compra efetuada. Comprou "+ produto + " - Característica: " + opção + ". Quantidade: "+ quantidade + " - Valor total da compra: R$ "+ (valor * quantidade))
+    }
+  }
+  function comprarprodutos2(){ 
+    var produto = document.getElementById("venda2").innerHTML; 
+    var opção = document.getElementById("opção2").value;
+    var quantidade = parseInt(document.getElementById("quantidade2").value);
+    var valor = parseFloat(document.getElementById("valor2").value);
+      if(produto == "" || quantidade == "" || quantidade <= 0 || valor == "" || opção == "Escolha"){
+        alert("Preencha todos os campos!");
+      }else{
+        alert("Compra efetuada. Comprou "+ produto + " - Característica: " + opção + ". Quantidade: "+ quantidade + " - Valor total da compra: R$ "+ (valor * quantidade))
+      }
+    }
+  function comprarprodutos3(){ 
    var produto = document.getElementById("venda3").innerHTML; 
-   var opçãotamanho = document.getElementById("opçãotamanho").value;
-   var quantidade = parseInt(document.getElementById("quantidade").value);
-   var valor = parseInt(document.getElementById("valor").innerHTML); //consertar esse código
-
-
-
-   alert("Compra efetuada. Comprou "+ produto + " - Tamanho: " + opçãotamanho + ". Quantidade: "+ quantidade + " - Valor do produto: "+ valor)
-    
-    //if(produto == "" || quantidade == "" || valor == "" || tamanho == ""){
-      //alert("Preencha todos os campos!");
-    //}else{
-      //alert("Produto comprado com sucesso! Enviado conforme escolha. Produto: "+ produto +" - quantidade: "+ quantidade +" - Tamanho: "+ tamanho +". Valor total: "+ valor + quantidade + soma);
-    //}
-
+   var opção = document.getElementById("opção3").value;
+   var quantidade = parseInt(document.getElementById("quantidade3").value);
+   var valor = parseFloat(document.getElementById("valor3").value);
+    if(produto == "" || quantidade == "" || quantidade <= 0 || valor == "" || opção == "Escolha"){
+      alert("Preencha todos os campos!");
+    }else{
+      alert("Compra efetuada. Comprou "+ produto + " - Característica: " + opção + ". Quantidade: "+ quantidade + " - Valor total da compra: R$ "+ (valor * quantidade))
+    }
   }
 </script>
 </html>
