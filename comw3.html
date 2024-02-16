@@ -11,26 +11,31 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div class="container-fluid">
+            <div class="container-fluid mx-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="./index.html">Sem Bootstrap</a></li>
                         <li class="nav-item"><a class="nav-link active" href="./combootstrap.html">Com Bootstrap</a> </li>
                         <li class="nav-item"><a class="nav-link active" href="./comw3.html">Com Bootstrap 2</a> </li>
                     </ul>
+                </div>
             </div>
-            <div class="navbar-brand text-light mx-5 p-0 d-none d-md-block">Roberto Wenceslau <img class="d-inline-block align-text-center p-0" width="20%" height="50%" src="./img/rew.png" alt="" onclick="robertowenceslau@gmail.com"></div>
+            <div class="navbar-brand text-light mx-5 p-0 d-none d-md-block" >Roberto Wenceslau <img class="d-inline-block align-text-center p-0" width="20%" height="50%" src="./img/rew.png" alt="" onclick="robertowenceslau@gmail.com"></div>
         </nav>
     </header>
     <main>
-        <section class="bg-dark pt-5 pb-3" width="100%">
+        <section class="bg-dark pt-5 pb-3">
             <div class="container">
                 <div class="container-fluid text-light">
                     <div class="container-fluid row">
                         <div class=" col-sm-6">
-                            <img class="float-start" src="./img/cubo png ps.png">
+                            <img class="d-none d-sm-block" src="./img/cubo png ps.png">
                         </div>
                         <div class="col-sm-6">
-                            <h1 class="text-center">Site do Sampsom</h1>
+                            <h1 class="text-center">Site do <span class="text-warning fw-bold p-0 my-1">Sampsom</span></h1>
                             <p class="lead">Venha participar deste grande evento de vendas. Você não pode perder a oportunidade de conseguir os melhores preços da década. Tudo pela metade do dobro!</p>
                         </div>
                     </div>
@@ -38,18 +43,23 @@
             </div>
         </section>
         <section class="bg-primary p-3">
-            <div class="container">
-                <div class="container-fluid">
-                    <div class="container-fluid row">
-                        <div class="col-sm-6">
-                            <h3 class="text-light fw-bold">Cadastre seu e-mail</h3>
-                        </div>
-                        <div class="input-group mb-3 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Digite seu E-mail">
-                            <button class="btn btn-outline-secondary btn-light text-dark" type="button">Enviar</button>
-                        </div>
-                    </div>
+            
+            <div class="row mx-5 aling-items-center">
+                <div class="col-6 text-light">
+                    <h3 class="text-warning fw-bold">Receba promoções e descontos</h3>
                 </div>
+                
+                <div class="col-6">
+                    
+                    <h3 class="text-light fw-bold">Cadastre seu e-mail</h3>
+                        
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Digite seu E-mail">
+                        <button class="btn btn-outline-secondary btn-warning text-dark" type="button">Enviar</button>
+                    </div>
+                    
+                </div>
+            
             </div>
         </section>
     </main>
